@@ -29,8 +29,10 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v7
         with:
-          go-version-file: go.mod
+          go-version-file: go.work
           cache: true
+          cache-dependency-path: |
+            **/go.sum
 
       - name: Check formatting
         shell: bash
