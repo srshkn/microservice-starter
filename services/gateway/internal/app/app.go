@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	"gateway/internal/middleware"
 	"gateway/internal/swagger"
 
 	v1GenAPI "gateway/internal/generated/v1"
@@ -32,6 +33,7 @@ func New(
 	serverCfg configServer,
 	logger *slog.Logger,
 	swaggerCfg swagger.Config,
+
 ) *serverApp {
 	mux := http.NewServeMux()
 
@@ -41,7 +43,9 @@ func New(
 
 	strictHandler := v1GenAPI.NewStrictHandlerWithOptions(
 		handler,
-		[]v1GenAPI.StrictMiddlewareFunc{},
+		[]v1GenAPI.StrictMiddlewareFunc{
+			middleware.Logging(logger),
+		},
 		v1GenAPI.StrictHTTPServerOptions{},
 	)
 
