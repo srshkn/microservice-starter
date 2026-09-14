@@ -14,8 +14,9 @@ const (
 )
 
 type config struct {
-	Server *server
-	Logger *logger
+	Server  *server
+	Logger  *logger
+	Swagger *swagger
 }
 
 func New() (*config, string, error) {
