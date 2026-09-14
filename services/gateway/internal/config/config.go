@@ -15,6 +15,7 @@ const (
 
 type config struct {
 	Server *server
+	Logger *logger
 }
 
 func New() (*config, string, error) {
@@ -33,6 +34,10 @@ func New() (*config, string, error) {
 
 	if err := cfg.Server.validate(); err != nil {
 		return nil, "", fmt.Errorf("validate config Server: %w", err)
+	}
+
+	if err := cfg.Logger.validate(); err != nil {
+		return nil, "", fmt.Errorf("validate config Logger: %w", err)
 	}
 
 	return &cfg, "", nil
