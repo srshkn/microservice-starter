@@ -56,3 +56,20 @@ jobs:
       - name: Build
         run: | 
           go build ./services/gateway/...
+
+  checks-dockerfile:
+    needs: checks-go
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Validate Dockerfile
+        run: docker build --check -f ./services/gateway/Dockerfile .
+
+      - name: Build Docker image
+        run: docker build -f ./services/gateway/Dockerfile -t gateway:ci .
