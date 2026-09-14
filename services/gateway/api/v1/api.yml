@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info:
+  title: Microservice starter
+  description: Стартовый шаблон микросервиса
+  version: "1.0.0"
+
+servers:
+  - url: /api/v1
+
+tags:
+  - name: Meta
+
+paths:
+  # ──────────────────────────────────────────────────────────────
+  # Meta
+  # ──────────────────────────────────────────────────────────────
+  /health:
+    get:
+      tags: [Meta]
+      summary: "Проверка жизни API."
+      description: >
+        Endpoint предназначен для проверки работоспособности API.
+        Возвращает "OK" и статус 200, если сервис жив.
+      responses:
+        "200":
+          description: API работает корректно
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    example: OK
