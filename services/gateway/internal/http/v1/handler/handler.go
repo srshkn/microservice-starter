@@ -8,9 +8,9 @@ type handler struct {
 	metaHandler
 }
 
-func New(meta metaHandler) *handler {
+func New(meta *metaHandler) *handler {
 	return &handler{
-		metaHandler: meta,
+		metaHandler: *meta,
 	}
 }
 

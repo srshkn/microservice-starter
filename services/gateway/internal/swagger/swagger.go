@@ -9,13 +9,13 @@ import (
 	v1GenAPI "gateway/internal/generated/v1"
 )
 
-type config interface {
+type Config interface {
 	GetSwaggerEnabled() bool
 }
 
 func Register(
 	mux *http.ServeMux,
-	cfg config,
+	cfg Config,
 ) {
 	if !cfg.GetSwaggerEnabled() {
 		return
