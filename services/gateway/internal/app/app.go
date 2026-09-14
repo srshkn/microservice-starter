@@ -33,6 +33,7 @@ func New(
 	serverCfg configServer,
 	logger *slog.Logger,
 	swaggerCfg swagger.Config,
+	cors middleware.CORS,
 
 ) *serverApp {
 	mux := http.NewServeMux()

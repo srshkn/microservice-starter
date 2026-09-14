@@ -22,6 +22,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -33,6 +38,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "prod",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -44,6 +54,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -55,6 +70,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -66,6 +86,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -77,6 +102,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "500ms",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -88,6 +118,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "1m",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -99,6 +134,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 		{
@@ -110,6 +150,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "false",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 		},
 
@@ -124,6 +169,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -136,6 +186,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -148,6 +203,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "invalid",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -160,6 +220,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -172,6 +237,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "invalid",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -184,6 +254,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "parse config",
 		},
@@ -199,6 +274,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -211,6 +291,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -223,6 +308,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -235,6 +325,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -247,6 +342,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "0s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -259,6 +359,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "-1s",
 				loggerFormatEnv:          "dev",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Server",
 		},
@@ -271,6 +376,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Logger",
 		},
@@ -283,6 +393,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "json",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Logger",
 		},
@@ -295,6 +410,11 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "DEV",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config Logger",
 		},
@@ -310,8 +430,67 @@ func TestNew(t *testing.T) {
 				serverShutdownTimeoutEnv: "10s",
 				loggerFormatEnv:          "invalid",
 				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000;https://example.com",
+				corsAllowedMethodsEnv:     "GET;POST;PUT;PATCH;DELETE;OPTIONS",
+				corsAllowedHeadersEnv:     "Content-Type;Authorization",
+				corsAllowedCredentialsEnv: "true",
 			},
 			wantErr: "validate config",
+		},
+
+		// CORS
+
+		{
+			name: "invalid cors origin",
+			env: map[string]string{
+				configPrefixEnv:          "",
+				serverHostEnv:            "localhost",
+				serverPortEnv:            "8080",
+				serverShutdownTimeoutEnv: "10s",
+				loggerFormatEnv:          "dev",
+				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "ftp://example.com",
+				corsAllowedMethodsEnv:     "GET;POST",
+				corsAllowedHeadersEnv:     "Content-Type",
+				corsAllowedCredentialsEnv: "true",
+			},
+			wantErr: "validate config CORS",
+		},
+		{
+			name: "invalid cors method",
+			env: map[string]string{
+				configPrefixEnv:          "",
+				serverHostEnv:            "localhost",
+				serverPortEnv:            "8080",
+				serverShutdownTimeoutEnv: "10s",
+				loggerFormatEnv:          "dev",
+				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000",
+				corsAllowedMethodsEnv:     "GET;INVALID",
+				corsAllowedHeadersEnv:     "Content-Type",
+				corsAllowedCredentialsEnv: "true",
+			},
+			wantErr: "validate config CORS",
+		},
+		{
+			name: "invalid cors credentials",
+			env: map[string]string{
+				configPrefixEnv:          "",
+				serverHostEnv:            "localhost",
+				serverPortEnv:            "8080",
+				serverShutdownTimeoutEnv: "10s",
+				loggerFormatEnv:          "dev",
+				swaggerEnabledEnv:        "true",
+
+				corsAllowedOriginsEnv:     "http://localhost:3000",
+				corsAllowedMethodsEnv:     "GET;POST",
+				corsAllowedHeadersEnv:     "Content-Type",
+				corsAllowedCredentialsEnv: "invalid",
+			},
+			wantErr: "validate config CORS",
 		},
 	}
 

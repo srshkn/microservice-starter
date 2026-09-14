@@ -17,6 +17,7 @@ type config struct {
 	Server  *server
 	Logger  *logger
 	Swagger *swagger
+	CORS    *cors
 }
 
 func New() (*config, string, error) {
@@ -39,6 +40,10 @@ func New() (*config, string, error) {
 
 	if err := cfg.Logger.validate(); err != nil {
 		return nil, "", fmt.Errorf("validate config Logger: %w", err)
+	}
+
+	if err := cfg.CORS.validate(); err != nil {
+		return nil, "", fmt.Errorf("validate config CORS: %w", err)
 	}
 
 	return &cfg, "", nil
