@@ -14,7 +14,8 @@ const (
 )
 
 type config struct {
-	GRPC *grpc
+	GRPC   *grpc
+	Logger *logger
 }
 
 func New() (*config, string, error) {
@@ -33,6 +34,10 @@ func New() (*config, string, error) {
 
 	if err := cfg.GRPC.validate(); err != nil {
 		return nil, "", fmt.Errorf("validate config gRPC: %w", err)
+	}
+
+	if err := cfg.Logger.validate(); err != nil {
+		return nil, "", fmt.Errorf("validate config Logger: %w", err)
 	}
 
 	return &cfg, "", nil

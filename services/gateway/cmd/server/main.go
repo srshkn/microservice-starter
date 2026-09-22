@@ -9,7 +9,7 @@ import (
 
 	"gateway/internal/app"
 	"gateway/internal/config"
-	"gateway/internal/logging"
+	"microservice-starter/pkg/logging"
 )
 
 func main() {
