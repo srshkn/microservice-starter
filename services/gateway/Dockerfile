@@ -2,11 +2,11 @@ FROM golang:1.26.8-bookworm AS builder
 
 WORKDIR /app
 
-COPY go.* ./
+COPY . .
+
+WORKDIR /app/services/gateway
 
 RUN go mod download
-
-COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build \
     -trimpath \
