@@ -47,13 +47,15 @@ jobs:
 
       - name: Vet
         run: | 
+          go vet ./pkg/...
           go vet ./services/auth/...
           go vet ./services/gateway/...
 
       - name: Test
         run: |
-          go test ./services/auth/...
-          go test ./services/gateway/...
+          go test -race -count=1 ./pkg/...
+          go test -race -count=1 ./services/auth/...
+          go test -race -count=1 ./services/gateway/...
 
       - name: Build
         run: | 
@@ -76,11 +78,11 @@ jobs:
           docker build \
             --check \
             -f ./services/gateway/Dockerfile \
-            ./services/gateway
+            .
 
       - name: Build Docker image
         run: |
           docker build \
             -f ./services/gateway/Dockerfile \
             -t gateway:ci \
-            ./services/gateway
+            .
