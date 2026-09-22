@@ -10,10 +10,11 @@ import (
 )
 
 const (
-	configPrefixEnv = "CONFIG_PREFIX"
+	configPrefixEnv = "SERVICE"
 )
 
 type config struct {
+	service string
 	Server  *server
 	Logger  *logger
 	Swagger *swagger
@@ -28,6 +29,8 @@ func New() (*config, string, error) {
 	}
 
 	prefix := os.Getenv(configPrefixEnv)
+
+	cfg.service = prefix
 
 	help, err := conf.Parse(prefix, &cfg)
 	if err != nil {
@@ -47,4 +50,8 @@ func New() (*config, string, error) {
 	}
 
 	return &cfg, "", nil
+}
+
+func (c *config) GetServiceName() string {
+	return c.service
 }

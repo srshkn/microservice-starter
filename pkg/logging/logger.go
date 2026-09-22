@@ -10,7 +10,7 @@ type config interface {
 	GetFormat() string
 }
 
-func New(cfg config) (*slog.Logger, error) {
+func New(service string, cfg config) (*slog.Logger, error) {
 	var handler slog.Handler
 
 	switch cfg.GetFormat() {
@@ -35,5 +35,7 @@ func New(cfg config) (*slog.Logger, error) {
 		return nil, fmt.Errorf("unsupported logger format: %q", cfg.GetFormat())
 	}
 
-	return slog.New(handler), nil
+	return slog.New(handler).With(
+		slog.String("service", service),
+	), nil
 }

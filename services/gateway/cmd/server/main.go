@@ -39,7 +39,7 @@ func main() {
 	// -------------------------------------------------------------------------
 	// Logger
 
-	logger, err := logging.New(cfg.Logger)
+	logger, err := logging.New(cfg.GetServiceName(), cfg.Logger)
 	if err != nil {
 		slog.Error(
 			"failed to configuration logger",
