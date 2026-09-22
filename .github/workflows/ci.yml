@@ -79,10 +79,18 @@ jobs:
             --check \
             -f ./services/gateway/Dockerfile \
             .
+          docker build \
+            --check \
+            -f ./services/auth/Dockerfile \
+            .
 
       - name: Build Docker image
         run: |
           docker build \
             -f ./services/gateway/Dockerfile \
             -t gateway:ci \
+            .
+          docker build \
+            -f ./services/auth/Dockerfile \
+            -t auth:ci \
             .
