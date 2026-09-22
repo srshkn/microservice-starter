@@ -13,8 +13,10 @@ import (
 	"gateway/internal/middleware"
 	"gateway/internal/swagger"
 
+	"gateway/internal/domain/v1/meta"
+
 	v1GenAPI "gateway/internal/generated/v1"
-	handlerApp "gateway/internal/http/v1/handler"
+	handlerApp "gateway/internal/http"
 )
 
 type configServer interface {
@@ -39,7 +41,7 @@ func New(
 	mux := http.NewServeMux()
 
 	handler := handlerApp.New(
-		handlerApp.NewMeta(),
+		meta.NewHandler(),
 	)
 
 	strictHandler := v1GenAPI.NewStrictHandlerWithOptions(

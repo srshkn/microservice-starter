@@ -1,4 +1,4 @@
-package handler
+package meta
 
 import (
 	"context"
@@ -6,13 +6,13 @@ import (
 	v1GenAPI "gateway/internal/generated/v1"
 )
 
-type metaHandler struct{}
+type handler struct{}
 
-func NewMeta() *metaHandler {
-	return &metaHandler{}
+func NewHandler() *handler {
+	return &handler{}
 }
 
-func (h *metaHandler) GetHealth(
+func (h *handler) GetHealth(
 	ctx context.Context,
 	request v1GenAPI.GetHealthRequestObject,
 ) (v1GenAPI.GetHealthResponseObject, error) {
